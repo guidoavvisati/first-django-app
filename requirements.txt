@@ -1,1 +1,10 @@
 django
+tox
+pytest
+tox-venv
+safety
+bandit
+black
+flake8
+pre-commit
+seed-isort-config
