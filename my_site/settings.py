@@ -32,13 +32,13 @@ ALLOWED_HOSTS = ["127.0.0.1", "firstherokusite99.herokuapp.com"]
 # Application definition
 
 INSTALLED_APPS = [
+    "polls.apps.PollsConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "polls",
 ]
 
 MIDDLEWARE = [
@@ -120,7 +120,7 @@ STATIC_URL = "/static/"
 STATICFILES_DIRS = (os.path.join(BASE_DIR, STATIC_URL),)
 
 #  Add configuration for static files storage using whitenoise
-STATICFILES_STORAGE = "whitenoise.django.GzipManifestStaticFilesStorage"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 prod_db = dj_database_url.config(conn_max_age=500)
 DATABASES["default"].update(prod_db)
