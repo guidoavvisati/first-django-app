@@ -1,4 +1,4 @@
-from my_site import manage
+import manage
 
 
 def test_manage_import():
