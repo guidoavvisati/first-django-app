@@ -10,6 +10,6 @@ tox-venv
 safety
 bandit
 black
-flake8
+flake8>=3.8.0a2
 pre-commit
 seed-isort-config
